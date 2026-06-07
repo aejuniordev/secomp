@@ -10,6 +10,7 @@ const Header = () => {
     { name: 'Programação', href: '#programacao' },
     { name: 'Maratona', href: '#maratona' },
     { name: 'Contato', href: '#contato' },
+    { name: 'Localização', href: '#localizacao' },
   ]
 
   return (

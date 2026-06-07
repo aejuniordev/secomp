@@ -1,44 +1,44 @@
-import React from 'react'
-import { Trophy, Calendar, Clock, ExternalLink } from 'lucide-react'
+import React from "react";
+import { Trophy, Calendar, Clock, ExternalLink } from "lucide-react";
 
 const Maratona = () => {
   const timeline = [
     {
-      date: 'Até 11/05/2026',
-      description: 'Inscrição para sediar a primeira fase',
+      date: "Até 11/05/2026",
+      description: "Inscrição para sediar a primeira fase",
       isEvent: false,
     },
     {
-      date: 'Início de junho',
-      description: 'Abertura das inscrições',
+      date: "Início de junho",
+      description: "Abertura das inscrições",
       isEvent: false,
     },
     {
-      date: 'Até 19/07/2026',
-      description: 'Inscrição com desconto',
+      date: "Até 19/07/2026",
+      description: "Inscrição com desconto",
       isEvent: false,
     },
     {
-      date: 'Até 10/08/2026',
-      description: 'Inscrição de times deve estar completa',
+      date: "Até 10/08/2026",
+      description: "Inscrição de times deve estar completa",
       isEvent: false,
     },
     {
-      date: 'Até 22/08/2026',
-      description: 'Inscrição de café com leite',
+      date: "Até 22/08/2026",
+      description: "Inscrição de café com leite",
       isEvent: false,
     },
     {
-      date: '29/08/2026',
-      description: 'Primeira Fase',
+      date: "29/08/2026",
+      description: "Primeira Fase",
       isEvent: true,
     },
     {
-      date: 'Até 09/09/2026',
-      description: 'Definição dos classificados para a Final Brasileira',
+      date: "Até 09/09/2026",
+      description: "Definição dos classificados para a Final Brasileira",
       isEvent: false,
     },
-  ]
+  ];
 
   return (
     <section id="maratona" className="py-24 px-4">
@@ -57,8 +57,8 @@ const Maratona = () => {
           </h2>
           <div className="w-16 h-1 bg-secomp-cyan mx-auto mb-6"></div>
           <p className="text-secomp-text max-w-2xl mx-auto">
-            Fase regional da Maratona de Programação promovida pela Sociedade Brasileira de
-            Computação (SBC).
+            Fase regional da Maratona de Programação promovida pela Sociedade
+            Brasileira de Computação (SBC).
           </p>
         </div>
 
@@ -76,24 +76,26 @@ const Maratona = () => {
                   key={index}
                   className={`flex items-start gap-4 p-3 rounded-lg ${
                     item.isEvent
-                      ? 'bg-secomp-cyan/10 border border-secomp-cyan/30'
-                      : 'hover:bg-secomp-darker/50'
+                      ? "bg-secomp-cyan/10 border border-secomp-cyan/30"
+                      : "hover:bg-secomp-darker/50"
                   } transition-colors`}
                 >
                   <Clock
                     className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                      item.isEvent ? 'text-secomp-cyan' : 'text-secomp-text'
+                      item.isEvent ? "text-secomp-cyan" : "text-secomp-text"
                     }`}
                   />
                   <div className="flex-1">
                     <span
                       className={`font-semibold ${
-                        item.isEvent ? 'text-secomp-cyan' : 'text-white'
+                        item.isEvent ? "text-secomp-cyan" : "text-white"
                       }`}
                     >
                       {item.date}
                     </span>
-                    <p className="text-secomp-text text-sm">{item.description}</p>
+                    <p className="text-secomp-text text-sm">
+                      {item.description}
+                    </p>
                   </div>
                   {item.isEvent && (
                     <span className="bg-secomp-cyan text-secomp-dark text-xs font-semibold px-2 py-1 rounded">
@@ -128,7 +130,9 @@ const Maratona = () => {
 
             {/* FAQ Card */}
             <div className="bg-secomp-card border border-secomp-border rounded-xl p-6">
-              <h3 className="text-white font-semibold mb-4">Perguntas Frequentes</h3>
+              <h3 className="text-white font-semibold mb-4">
+                Perguntas Frequentes
+              </h3>
               <div className="bg-secomp-darker/50 rounded-lg p-4 text-center">
                 <span className="text-secomp-text">Em breve</span>
               </div>
@@ -137,7 +141,7 @@ const Maratona = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Maratona
+export default Maratona;
