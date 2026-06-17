@@ -1,7 +1,5 @@
 import React from "react";
 
-// ─── Tipos de atividade ───────────────────────────────────────────────────────
-
 const TIPO = {
   PALESTRA: "palestra",
   OFICINA: "oficina",
@@ -33,16 +31,11 @@ const tipoConfig = {
   },
 };
 
-// Atalhos para construir atividades
 const P = (label) => ({ label, tipo: TIPO.PALESTRA });
 const O = (label) => ({ label, tipo: TIPO.OFICINA });
 const C = (label) => ({ label, tipo: TIPO.COFFEE });
 const E = (label) => ({ label, tipo: TIPO.ESPECIAL });
 const M = (label) => ({ label, tipo: TIPO.MARATONA });
-
-// ─── Dados da programação ─────────────────────────────────────────────────────
-// Cada célula é um array de atividades ou null (= "A definir").
-// Para editar: altere apenas este array.
 
 const dias = ["26/08/2026", "27/08/2026", "28/08/2026", "29/08/2026"];
 
@@ -143,8 +136,6 @@ const palestras = [
   "Sinergias tecnológicas e inovação amazônica",
 ];
 
-// ─── Sub-componentes ──────────────────────────────────────────────────────────
-
 const Badge = ({ tipo, children }) => {
   const { classes } = tipoConfig[tipo];
   return (
@@ -181,8 +172,6 @@ const Celula = ({ celula }) => {
     </div>
   );
 };
-
-// ─── Componente principal ─────────────────────────────────────────────────────
 
 const Programacao = () => (
   <section id="programacao" className="py-24 px-4 bg-secomp-darker/50">
