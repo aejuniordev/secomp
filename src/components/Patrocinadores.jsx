@@ -1,24 +1,30 @@
 import React from "react";
 import logoMirtesCTB from "../../logo-mirtes-ctb.png";
-// import logoPatrocinador2 from "../../logo-patrocinador2.png";
-// import logoPatrocinador3 from "../../logo-patrocinador3.png";
+import logoTechlead from "../../assets/partners/logo-techlead.png";
+import logoVibe from "../../assets/partners/logo-vibe.png";
 // import logoPatrocinador4 from "../../logo-patrocinador4.png";
 // import logoPatrocinador5 from "../../logo-patrocinador5.png";
 // import logoPatrocinador6 from "../../logo-patrocinador6.png";
 
 const TOTAL_SLOTS = 6;
 
+// altura: altura da imagem em px — ajuste por logo para equalizar visualmente
 const patrocinadores = [
-  { nome: "Mirtes CTB", logo: logoMirtesCTB, site: null },
-  // { nome: "Patrocinador 2", logo: logoPatrocinador2, site: null },
-  // { nome: "Patrocinador 3", logo: logoPatrocinador3, site: null },
-  // { nome: "Patrocinador 4", logo: logoPatrocinador4, site: null },
-  // { nome: "Patrocinador 5", logo: logoPatrocinador5, site: null },
-  // { nome: "Patrocinador 6", logo: logoPatrocinador6, site: null },
+  { nome: "Mirtes CTB", logo: logoMirtesCTB, site: null, altura: 120 },
+  { nome: "Techlead", logo: logoTechlead, site: null, altura: 78 },
+  { nome: "Vibe", logo: logoVibe, site: null, altura: 78 },
+  // { nome: "Patrocinador 4", logo: logoPatrocinador4, site: null, altura: 64 },
+  // { nome: "Patrocinador 5", logo: logoPatrocinador5, site: null, altura: 64 },
+  // { nome: "Patrocinador 6", logo: logoPatrocinador6, site: null, altura: 64 },
 ];
 
+const ALTURA_PADRAO = 78;
+
 const Placeholder = () => (
-  <div className="flex-shrink-0 h-24 md:h-32 w-32 md:w-40 rounded-xl border border-dashed border-secomp-border flex flex-col items-center justify-center gap-1">
+  <div
+    className="flex-shrink-0 w-36 rounded-lg border border-dashed border-secomp-border flex items-center justify-center"
+    style={{ height: ALTURA_PADRAO }}
+  >
     <span className="text-secomp-text/40 text-xs font-medium uppercase tracking-widest">
       Aguardando
     </span>
@@ -47,7 +53,8 @@ const Patrocinadores = () => {
               <img
                 src={p.logo}
                 alt={`Logo ${p.nome}`}
-                className="h-24 md:h-32 w-auto object-contain rounded-xl"
+                style={{ height: p.altura ?? ALTURA_PADRAO }}
+                className="w-auto object-contain"
               />
             );
 
