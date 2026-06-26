@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Sparkles, Terminal, CheckCircle } from "lucide-react";
 import bgDesktop from "../../assets/bg-desktop.png";
 import bgMobile from "../../assets/bg-mobile-full.png";
+import iaCircuit from "../../assets/ia-circuit.svg";
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -35,8 +36,8 @@ const Hero = () => {
 
   const TimeBlock = ({ value, label }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-secomp-darker/80 backdrop-blur-sm border border-secomp-border/50 rounded-xl px-3 py-2 md:px-4 md:py-3 min-w-[60px] md:min-w-[80px] shadow-lg">
-        <span className="text-2xl md:text-3xl font-black text-white">
+      <div className="bg-secomp-darker/80 backdrop-blur-sm border border-secomp-border/50 rounded-xl px-2 py-1 md:px-2.5 md:py-1.5 min-w-[42px] md:min-w-[54px] shadow-lg">
+        <span className="text-lg md:text-xl font-black text-white">
           {String(value).padStart(2, "0")}
         </span>
       </div>
@@ -48,9 +49,9 @@ const Hero = () => {
 
   const CountdownCard = ({ className = "" }) => (
     <div
-      className={`bg-secomp-card/95 backdrop-blur-sm border border-secomp-border rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-2xl ${className}`}
+      className={`bg-secomp-card/95 border border-secomp-border rounded-2xl p-3 md:p-4 shadow-2xl ${className}`}
     >
-      <p className="text-secomp-text uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-8 font-semibold text-center">
+      <p className="text-secomp-text uppercase tracking-widest text-xs md:text-sm mb-1 md:mb-3 font-semibold text-center">
         Faltam
       </p>
       <div className="flex items-center justify-center gap-2 md:gap-4">
@@ -71,13 +72,52 @@ const Hero = () => {
     </div>
   );
 
+  const TemaDestaque = ({ grande = false }) => (
+    <div
+      className={`relative rounded-2xl overflow-hidden border border-secomp-cyan/30 bg-gradient-to-br from-secomp-card via-secomp-card/95 to-secomp-cyan/5 shadow-xl shadow-secomp-cyan/10 ${grande ? "p-6" : "p-5 md:p-8"}`}
+    >
+      {/* Glow decorativo */}
+      <div className="absolute -top-8 -right-8 w-40 h-40 bg-secomp-cyan/10 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute -bottom-6 -left-6 w-28 h-28 bg-secomp-cyan/5 rounded-full blur-xl pointer-events-none" />
+
+      <div className="relative">
+        {/* Pill badge */}
+        <span
+          className={`inline-flex items-center gap-1.5 font-bold uppercase tracking-widest text-secomp-cyan border border-secomp-cyan/50 rounded-full bg-secomp-cyan/10 mb-4 ${grande ? "text-[11px] px-3 py-1" : "text-[9px] md:text-[11px] px-2 md:px-3 py-0.5 md:py-1"}`}
+        >
+          <span
+            className={`inline-block rounded-full bg-secomp-cyan ${grande ? "w-1.5 h-1.5" : "w-1 h-1 md:w-1.5 md:h-1.5"}`}
+          />
+          Tema SECOMP 2026
+        </span>
+
+        {/* Ícone + título */}
+        <div
+          className={`flex items-start gap-3 mb-4 ${grande ? "" : "md:gap-5"}`}
+        >
+          <img
+            src={iaCircuit}
+            alt=""
+            className={`flex-shrink-0 opacity-90 ${grande ? "w-10 h-10" : "w-9 h-9 md:w-14 md:h-14"}`}
+          />
+          <p
+            className={`text-white font-bold leading-snug ${grande ? "text-lg" : "text-base md:text-3xl"}`}
+          >
+            Tecnologia e sociedade diante das novas fronteiras da{" "}
+            <span className="text-secomp-cyan">inteligência artificial</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section
       id="home"
       className="min-h-screen flex flex-col items-center justify-center pt-6 pb-8 overflow-x-hidden"
     >
       {/* ── Mobile: imagem com badge e countdown sobrepostos ── */}
-      <div className="block md:hidden w-full mb-6">
+      <div className="block md:hidden w-full mb-4">
         <div className="relative h-[55vh] overflow-hidden">
           <img
             src={bgMobile}
@@ -93,8 +133,9 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          {/* Countdown na parte inferior da imagem */}
-          <div className="absolute bottom-6 left-4 right-4 z-10">
+          {/* Tema + Countdown empilhados na parte inferior */}
+          <div className="absolute bottom-6 left-4 right-4 z-10 flex flex-col gap-3">
+            <TemaDestaque grande />
             <CountdownCard />
           </div>
         </div>
@@ -116,9 +157,13 @@ const Hero = () => {
             </span>
           </div>
         </div>
-        {/* Countdown sobreposto à direita */}
-        <div className="absolute right-8 top-1/2 -translate-y-1/2">
+        {/* Countdown à esquerda, centralizado verticalmente */}
+        <div className="absolute left-[8%] top-[48%] -translate-y-1/2">
           <CountdownCard />
+        </div>
+        {/* Tema à direita, centralizado verticalmente */}
+        <div className="absolute right-12 top-[40%] -translate-y-1/2 max-w-3xl">
+          <TemaDestaque />
         </div>
       </div>
 

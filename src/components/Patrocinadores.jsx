@@ -2,6 +2,7 @@ import React from "react";
 import logoMirtesCTB from "../../logo-mirtes-ctb.png";
 import logoTechlead from "../../assets/partners/logo-techlead.png";
 import logoVibe from "../../assets/partners/logo-vibe.png";
+import logoSucesu from "../../assets/partners/logo-sucesu.png";
 // import logoPatrocinador4 from "../../logo-patrocinador4.png";
 // import logoPatrocinador5 from "../../logo-patrocinador5.png";
 // import logoPatrocinador6 from "../../logo-patrocinador6.png";
@@ -13,7 +14,8 @@ const patrocinadores = [
   { nome: "Mirtes CTB", logo: logoMirtesCTB, site: null, altura: 120 },
   { nome: "Techlead", logo: logoTechlead, site: null, altura: 78 },
   { nome: "Vibe", logo: logoVibe, site: null, altura: 78 },
-  // { nome: "Patrocinador 4", logo: logoPatrocinador4, site: null, altura: 64 },
+  { nome: "Sucesu", logo: logoSucesu, site: null, altura: 84 },
+  // { nome: "SUCESU 4", logo: logoPatrocinador4, site: null, altura: 64 },
   // { nome: "Patrocinador 5", logo: logoPatrocinador5, site: null, altura: 64 },
   // { nome: "Patrocinador 6", logo: logoPatrocinador6, site: null, altura: 64 },
 ];
