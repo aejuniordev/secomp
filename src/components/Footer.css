@@ -1,0 +1,84 @@
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 70px 0 40px;
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+footer .brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+footer .brand svg {
+  width: 26px;
+  height: 26px;
+  flex: none;
+}
+
+footer p {
+  color: rgba(244, 248, 244, 0.6);
+  font-size: 0.92rem;
+  margin-top: 16px;
+  max-width: 34ch;
+}
+
+.foot-col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--current);
+  margin-bottom: 16px;
+}
+
+.foot-col a {
+  display: block;
+  color: rgba(244, 248, 244, 0.72);
+  font-size: 0.92rem;
+  padding: 5px 0;
+  transition: 0.25s;
+}
+
+.foot-col a:hover {
+  color: #fff;
+}
+
+.link-disabled {
+  display: block;
+  font-size: 0.92rem;
+  padding: 5px 0;
+  color: rgba(244, 248, 244, 0.28);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.foot-bot {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(244, 248, 244, 0.12);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  color: rgba(244, 248, 244, 0.5);
+}
+
+@media (max-width: 900px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

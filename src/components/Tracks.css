@@ -1,0 +1,71 @@
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.track {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px 28px;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s, border-color 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.track:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px -26px rgba(10, 37, 33, 0.28);
+  border-color: rgba(14, 124, 128, 0.4);
+}
+
+.track .tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--river);
+  position: absolute;
+  top: 24px;
+  right: 26px;
+}
+
+.track .ic {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: rgba(47, 211, 174, 0.16);
+  margin-bottom: 20px;
+  color: var(--river-deep);
+}
+
+.track .ic svg {
+  width: 24px;
+  height: 24px;
+}
+
+.track h3 {
+  font-size: 1.32rem;
+  letter-spacing: -0.01em;
+}
+
+.track p {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .tracks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .tracks {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,216 @@
+/* ── Bloco original ── */
+.local-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.local-card {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 24px;
+  padding: 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.local-card .eyebrow {
+  color: var(--current);
+}
+
+.local-card .eyebrow::before {
+  box-shadow: 0 0 0 4px rgba(47, 211, 174, 0.18);
+}
+
+.local-card h3 {
+  font-size: 2.2rem;
+  margin: 14px 0 0;
+  color: #fff;
+}
+
+.local-card p {
+  color: rgba(244, 248, 244, 0.72);
+  margin-top: 14px;
+}
+
+.local-card .pin {
+  margin-top: 26px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.84rem;
+  color: var(--current);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.local-net {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 240px;
+  opacity: 0.5;
+}
+
+.local-feats {
+  display: grid;
+  gap: 18px;
+}
+
+.feat {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.feat .d {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--current);
+  margin-top: 7px;
+  flex: none;
+  box-shadow: 0 0 0 5px rgba(47, 211, 174, 0.18);
+}
+
+.feat h4 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.feat p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ── Endereço + Mapa ── */
+.local-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 32px;
+  align-items: stretch;
+  margin-top: 48px;
+}
+
+.local-panel {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+}
+
+.local-info-block {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.local-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(47, 211, 174, 0.12);
+  border: 1px solid rgba(47, 211, 174, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  color: var(--current);
+}
+
+.local-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.local-info-block h4 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.local-info-block address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.local-info-block p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.local-maps-btn {
+  display: block;
+  margin-top: auto;
+  text-align: center;
+  padding: 13px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--current);
+  color: var(--current);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.local-maps-btn:hover {
+  background: var(--current);
+  color: #fff;
+}
+
+.local-map {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.local-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .local-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .local-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .local-map {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 560px) {
+  .local-card {
+    padding: 32px;
+  }
+
+  .local-panel {
+    padding: 28px 24px;
+  }
+
+  .local-map {
+    min-height: 280px;
+  }
+}
