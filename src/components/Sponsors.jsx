@@ -6,6 +6,7 @@ import logoTechlead from "../assets/sponsors/logo-techlead.png";
 import logoVibe from "../assets/sponsors/logo-vibe.png";
 import logoSucesu from "../assets/sponsors/logo-sucesu.png";
 import logoEquilibriumWeb from "../assets/sponsors/logo-equilibriumweb.png";
+import logoItProtect from "../assets/sponsors/logo-itprotect.png";
 
 import logoUFPA from "../assets/hosted/logo-ufpa-sf.png";
 import logoComputacao from "../assets/hosted/logo-computacao.png";
@@ -24,7 +25,7 @@ const patrocinadores = [
         site: null,
         altura: 54,
     },
-    // { nome: "Patrocinador 6", logo: null, site: null, altura: 64 },
+    { nome: "ITProtect", logo: logoItProtect, site: null, altura: 56 },
 ];
 
 const realizacao = [
