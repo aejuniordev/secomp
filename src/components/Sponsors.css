@@ -1,46 +1,76 @@
 .spons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
 }
 
 .spon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 24px;
-  min-width: 140px;
-  min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    min-width: 140px;
+    min-height: 100px;
+}
+
+.categoria-bloco {
+    margin-bottom: 40px;
+}
+
+.categoria-bloco:last-of-type {
+    margin-bottom: 0;
+}
+
+.categoria-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.categoria-medalha {
+    height: 96px;
+    width: auto;
+    object-fit: contain;
+}
+
+.categoria-nome {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
 }
 
 .spon-pending {
-  border: 1px dashed var(--line);
-  border-radius: 14px;
-  background: var(--paper-2);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
+    border: 1px dashed var(--line);
+    border-radius: 14px;
+    background: var(--paper-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
 }
 
 .realizacao-head {
-  margin-top: 52px;
-  margin-bottom: 24px;
+    margin-top: 52px;
+    margin-bottom: 24px;
 }
 
 .spons-cta {
-  text-align: center;
-  color: var(--ink-soft);
-  margin-top: 32px;
-  font-size: 0.95rem;
+    text-align: center;
+    color: var(--ink-soft);
+    margin-top: 32px;
+    font-size: 0.95rem;
 }
 
 .spons-cta a {
-  color: var(--river-deep);
-  font-weight: 600;
-  border-bottom: 1px solid var(--line);
+    color: var(--river-deep);
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
 }

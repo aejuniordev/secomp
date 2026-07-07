@@ -7,25 +7,67 @@ import logoVibe from "../assets/sponsors/logo-vibe.png";
 import logoSucesu from "../assets/sponsors/logo-sucesu.png";
 import logoEquilibriumWeb from "../assets/sponsors/logo-equilibriumweb.png";
 import logoItProtect from "../assets/sponsors/logo-itprotect.png";
+import logoInteceleri from "../assets/sponsors/logo-inteceleri-1.png";
 
 import logoUFPA from "../assets/hosted/logo-ufpa-sf.png";
 import logoComputacao from "../assets/hosted/logo-computacao.png";
 import logoPPGComp from "../assets/hosted/logo-ppgcomp.png";
 
-const TOTAL_SLOTS = 6;
+// import medalhaDiamante from "../assets/medals/icone_diamante-300x300_1.png";
+import medalhaOuro from "../assets/medals/icone_medalhas_ouro-192x300_1.png";
+import medalhaPrata from "../assets/medals/icone_medalhas_prata-198x300_1.png";
+import medalhaBronze from "../assets/medals/icone_medalhas_bronze-199x300_1.png";
 
-const patrocinadores = [
-    { nome: "Mirtes CTB", logo: logoMirtesCTB, site: null, altura: 120 },
-    { nome: "Techlead", logo: logoTechlead, site: null, altura: 78 },
-    { nome: "Vibe", logo: logoVibe, site: null, altura: 78 },
-    { nome: "Sucesu", logo: logoSucesu, site: null, altura: 84 },
+const categorias = [
+    // {
+    //     chave: "diamante",
+    //     nome: "Diamante",
+    //     medalha: medalhaDiamante,
+    //     patrocinadores: [],
+    // },
     {
-        nome: "EquilibriumWeb",
-        logo: logoEquilibriumWeb,
-        site: null,
-        altura: 54,
+        chave: "ouro",
+        nome: "Ouro",
+        medalha: medalhaOuro,
+        patrocinadores: [
+            { nome: "Techlead", logo: logoTechlead, site: null, altura: 80 },
+            { nome: "Vibe", logo: logoVibe, site: null, altura: 84 },
+            {
+                nome: "Inteceleri",
+                logo: logoInteceleri,
+                site: null,
+                altura: 130,
+            },
+        ],
     },
-    { nome: "ITProtect", logo: logoItProtect, site: null, altura: 56 },
+    {
+        chave: "prata",
+        nome: "Prata",
+        medalha: medalhaPrata,
+        patrocinadores: [
+            { nome: "Sucesu", logo: logoSucesu, site: null, altura: 78 },
+            { nome: "ITProtect", logo: logoItProtect, site: null, altura: 50 },
+        ],
+    },
+    {
+        chave: "bronze",
+        nome: "Bronze",
+        medalha: medalhaBronze,
+        patrocinadores: [
+            {
+                nome: "Mirtes CTB",
+                logo: logoMirtesCTB,
+                site: null,
+                altura: 100,
+            },
+            {
+                nome: "EquilibriumWeb",
+                logo: logoEquilibriumWeb,
+                site: null,
+                altura: 44,
+            },
+        ],
+    },
 ];
 
 const realizacao = [
@@ -38,8 +80,6 @@ const realizacao = [
     },
     { nome: "PPGCOMP", logo: logoPPGComp, site: null, altura: 90 },
 ];
-
-const pendentes = TOTAL_SLOTS - patrocinadores.length;
 
 function LogoSlot({ s, className = "spon" }) {
     const content = (
@@ -63,9 +103,34 @@ function LogoSlot({ s, className = "spon" }) {
     );
 }
 
+function CategoryBlock({ categoria }) {
+    const ref = useReveal();
+
+    return (
+        <div className="categoria-bloco reveal" ref={ref}>
+            <div className="categoria-head">
+                <img
+                    src={categoria.medalha}
+                    alt={`Medalha ${categoria.nome}`}
+                    className="categoria-medalha"
+                />
+                <span className="categoria-nome">{categoria.nome}</span>
+            </div>
+            <div className="spons">
+                {categoria.patrocinadores.length > 0 ? (
+                    categoria.patrocinadores.map((s) => (
+                        <LogoSlot key={s.nome} s={s} />
+                    ))
+                ) : (
+                    <div className="spon spon-pending">Aguardando</div>
+                )}
+            </div>
+        </div>
+    );
+}
+
 export default function Sponsors() {
     const refHead = useReveal();
-    const refList = useReveal();
     const refReal = useReveal();
     const refRealList = useReveal();
     const refText = useReveal();
@@ -87,16 +152,9 @@ export default function Sponsors() {
                     <h2>Quem rema com a gente</h2>
                 </div>
 
-                <div className="spons reveal" ref={refList}>
-                    {patrocinadores.map((s) => (
-                        <LogoSlot key={s.nome} s={s} />
-                    ))}
-                    {Array.from({ length: pendentes }).map((_, i) => (
-                        <div key={`pending-${i}`} className="spon spon-pending">
-                            Aguardando
-                        </div>
-                    ))}
-                </div>
+                {categorias.map((c) => (
+                    <CategoryBlock key={c.chave} categoria={c} />
+                ))}
 
                 <div className="realizacao-head reveal" ref={refReal}>
                     <span

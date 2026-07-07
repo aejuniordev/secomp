@@ -19,10 +19,6 @@ const ITEMS = [
         q: "O evento é aberto ao público?",
         a: "<strong>Sim!</strong> O evento é aberto ao público e recebe tanto alunos quanto profissionais e entusiastas da área. A participação é garantida mediante a inscrição.",
     },
-    {
-        q: "Haverá palestrantes de outros estados?",
-        a: "<strong>Sim!</strong> Há palestrantes de outros estados. Estamos preparando um evento incrível, com diversos convidados trazendo experiências únicas e conhecimentos que vão enriquecer ainda mais a programação.",
-    },
 ];
 
 export default function FAQ() {
