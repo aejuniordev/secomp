@@ -52,7 +52,7 @@ export default function Speakers() {
           ) : (
             <div className="speakers-pending">
               <span className="speakers-pending-pulse" />
-              <p>A definir...</p>
+              <p>Em construção...</p>
             </div>
           )}
         </div>

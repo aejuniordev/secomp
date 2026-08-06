@@ -1,7 +1,7 @@
 import { useReveal } from "../hooks/useReveal";
 import "./Local.css";
 
-const MAPS_URL = "https://maps.app.goo.gl/ZxpGa42hc3F3VPus7";
+const MAPS_URL = "https://maps.app.goo.gl/QqbxaEwXR1a9QgiF7";
 
 export default function Local() {
     const refCard = useReveal();
@@ -99,11 +99,12 @@ export default function Local() {
                                 <h4>Endereço</h4>
                                 <address>
                                     <span>
-                                        Instituto de Ciências Exatas e Naturais
-                                        — ICEN/UFPA
+                                        Espaço Inovação - PCT Guamá
                                     </span>
-                                    <span>R. Augusto Corrêa, 01 — Guamá</span>
-                                    <span>Belém — PA, 66075-110</span>
+                                    <span>R. da Inovação, S/N — Parque de Ciência e Tecnologia Guamá</span>
+                                    <span>
+                                      Belém - PA
+                                    </span>
                                 </address>
                             </div>
                         </div>
@@ -126,8 +127,7 @@ export default function Local() {
                             <div>
                                 <h4>Como chegar</h4>
                                 <p>
-                                    Acesso pela Av. Perimetral ou Av. Augusto
-                                    Montenegro. O campus possui estacionamento
+                                    Acesso pela Av. Perimetral, portão principal do PCT Guamá. O campus possui estacionamento
                                     próprio para visitantes.
                                 </p>
                             </div>
@@ -145,8 +145,8 @@ export default function Local() {
 
                     <div className="local-map reveal" ref={refMap}>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4971901321173!2d-48.456158699999996!3d-1.4745036999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48d950a724ca7%3A0x94f37c74f24e488!2sInstituto%20de%20Ci%C3%AAncias%20Exatas%20e%20Naturais%20-%20UFPA!5e0!3m2!1spt-BR!2sbr!4v1782732951561!5m2!1spt-BR!2sbr"
-                            title="Instituto de Ciências Exatas e Naturais – UFPA"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.515781728424!2d-48.44536639999999!3d-1.4640914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48daf1df7b819%3A0x41306fb4433dcb1d!2zRXNwYcOnbyBJbm92YcOnw6NvIChQQ1QgR3VhbcOhKQ!5e0!3m2!1spt-BR!2sbr!4v1786016712516!5m2!1spt-BR!2sbr"
+                            title="Espaço Inovação - PCT Guamá"
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="strict-origin-when-cross-origin"

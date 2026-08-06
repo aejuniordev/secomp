@@ -20,11 +20,13 @@ const BASE_SLOTS = [
 ];
 
 const MARATHON_SLOTS = [
-  { t: '9:00',  title: 'Abertura', meta: 'Chegada dos times e entrega do material', badge: 'Inicio' },
-  { t: '10:00', title: 'Sessão de aquecimento', meta: 'texto', badge: 'Aquecimento' },
-  { t: '12:00', title: 'Almoço', meta: 'texto', badge: 'Texto' },
-  { t: '14:00', title: 'Início da competição', meta: 'Texto', badge: 'Texto' },
-  { t: '19:00', title: 'Encerramento', meta: 'Divulgação dos resultados', badge: 'Texto' },
+  { t: '09:30', title: 'Chegada e credenciamento', meta: 'Recepção dos times e entrega do material da competição', badge: 'Início' },
+  { t: '10:00', title: 'Warmup', meta: 'Problemas de aquecimento para ambientação com o juiz online', badge: 'Aquecimento' },
+  { t: '11:00', title: 'Palestras dos patrocinadores', meta: 'Transmissão ao vivo no YouTube — primeira fase', badge: 'Palestra' },
+  { t: '12:00', title: 'Almoço', meta: 'Intervalo para almoço dos competidores', badge: 'Intervalo' },
+  { t: '13:30', title: 'Preparação para a competição', meta: 'Todos os competidores devem estar na sala de competição', badge: 'Preparação' },
+  { t: '14:00', title: 'Início da competição', meta: 'Início oficial da maratona de programação', badge: 'Competição' },
+  { t: '19:00', title: 'Encerramento', meta: 'Divulgação dos resultados e premiação', badge: 'Encerramento' },
 ];
 
 const SCHEDULES = [BASE_SLOTS, BASE_SLOTS, BASE_SLOTS, MARATHON_SLOTS];

@@ -104,10 +104,26 @@
 }
 
 @media (max-width: 560px) {
+  .days {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .day {
+    min-width: 0;
+    padding: 10px 14px;
+  }
   .slot {
     grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 0;
   }
   .slot .t {
     font-size: 0.84rem;
+  }
+  .slot .badge {
+    grid-column: 1;
+    justify-self: start;
+    margin-top: 4px;
   }
 }

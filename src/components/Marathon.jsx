@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useReveal } from '../hooks/useReveal';
 import logoMaratona from '../assets/hosted/logo-maratona-programacao.jpg';
 import './Marathon.css';
@@ -245,6 +245,7 @@ function TeamList({ universities }) {
   const [locked, setLocked] = useState(false);
   const [enter, setEnter] = useState('side');
   const uni = universities[active];
+  const containerRef = useRef(null);
 
   useEffect(() => {
     if (locked) return;
@@ -255,8 +256,26 @@ function TeamList({ universities }) {
     return () => clearInterval(id);
   }, [locked, universities.length]);
 
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+          setLocked(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="maratona-teams">
+    <div className="maratona-teams" ref={containerRef}>
       <div className="team-tabs" role="tablist" aria-label="Universidades participantes">
         {universities.map((u, i) => (
           <button
