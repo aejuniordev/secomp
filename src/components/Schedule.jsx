@@ -36,9 +36,14 @@ export default function Schedule() {
 
   return (
     <section className="band" id="programacao">
-      <div className="wrap">
+          <div className="wrap">
+              <span
+          className="eyebrow"
+      >
+        Programação
+      </span>
         <div className="sechead reveal" ref={refHead}>
-          <span className="eyebrow">Programação</span>
+          {/* <span className="eyebrow"></span>*/}
           <h2>Quatro dias, um rio de conteúdo</h2>
           <p>
             Toque em um dia para navegar pela agenda. A grade completa é

@@ -112,7 +112,7 @@ section {
 
 .sechead h2 {
   font-size: clamp(2rem, 5vw, 3.4rem);
-  margin: 16px 0 0;
+  margin: 18px 0 0;
 }
 
 .sechead p {
@@ -178,18 +178,6 @@ section {
   fill: var(--current);
 }
 
-/* Reveal animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
-}
-
-.reveal.in {
-  opacity: 1;
-  transform: none;
-}
-
 /* ---- Hero Network animation ---- */
 .net-base {
   fill: none;
@@ -234,7 +222,6 @@ section {
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .about-grid,
   .local-grid,
   .foot-grid {
     grid-template-columns: 1fr;

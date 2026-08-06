@@ -5,6 +5,8 @@ import About from './components/About';
 import Branch from './components/Branch';
 import Tracks from './components/Tracks';
 import Schedule from './components/Schedule';
+import Speakers from './components/Speakers';
+import Marathon from './components/Marathon';
 import Local from './components/Local';
 import CTA from './components/CTA';
 import FAQ from './components/FAQ';
@@ -20,6 +22,8 @@ export default function App() {
       <Branch />
       <Tracks />
       <Schedule />
+      <Speakers />
+      <Marathon />
       <Local />
       <CTA />
       <FAQ />

@@ -33,6 +33,8 @@ export default function Footer() {
                         <a href="#sobre">Sobre</a>
                         <a href="#trilhas">Trilhas</a>
                         <a href="#programacao">Programação</a>
+                        <a href="#palestrantes">Palestrantes</a>
+                        <a href="#maratona">Maratona</a>
                         <a href="#local">Local</a>
                     </div>
                     <div className="foot-col">
@@ -42,8 +44,9 @@ export default function Footer() {
                             E-mail da organização
                         </a>
                         <span className="link-disabled">Seja patrocinador</span>
-                        <span className="link-disabled">Inscreva-se</span>
-                        {/* <a href="#inscricao"></a>*/}
+                        <a href="#inscricao">
+                          Inscreva-se
+                        </a>
                     </div>
                 </div>
                 <div className="foot-bot">

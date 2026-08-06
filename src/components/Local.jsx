@@ -11,11 +11,14 @@ export default function Local() {
 
     return (
         <section className="band alt" id="local">
-            <div className="wrap">
+            <div className="wrap"><span
+                className="eyebrow"
+            >
+              Local
+            </span>
                 {/* ── Bloco original ── */}
                 <div className="local-grid">
                     <div className="local-card reveal" ref={refCard}>
-                        <span className="eyebrow">Onde acontece</span>
                         <h3>Belém do Pará</h3>
                         <p>
                             A porta de entrada da Amazônia, onde o rio encontra

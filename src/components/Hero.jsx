@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { useReveal } from "../hooks/useReveal";
 import logoSecomp from "../assets/principal/logo-secomp-colorido-sf.png";
 import "./Hero.css";
@@ -90,9 +89,9 @@ export default function Hero() {
                 </p>
                 <div className="hero-cta">
                     {/* <a href="#inscricao"></a>*/}
-                    <span className="btn btn-disabled">
-                        Garantir minha vaga →
-                    </span>
+                    <a href="#inscricao" className="btn">
+                      Garantir minha vaga →
+                    </a>
                     <a href="#programacao" className="btn ghost">
                         Ver programação
                     </a>

@@ -7,10 +7,14 @@ import logoVibe from "../assets/sponsors/logo-vibe.png";
 import logoSucesu from "../assets/sponsors/logo-sucesu.png";
 import logoEquilibriumWeb from "../assets/sponsors/logo-equilibriumweb.png";
 import logoItProtect from "../assets/sponsors/logo-itprotect.png";
-import logoInteceleri from "../assets/sponsors/logo-inteceleri-1.png";
+import logoInteceleri from "../assets/sponsors/logo-inteceleri.png";
+import logoCitiAmazon from "../assets/sponsors/logo-cityamazon.png";
+import logoiSaci from "../assets/sponsors/logo-isaci.webp";
+import logoFundacaoGuama from "../assets/sponsors/logo-fundacaoguama.jpeg";
+import logoCeAmazon from "../assets/sponsors/logo-ceamazon-preta.png";
 
 import logoUFPA from "../assets/hosted/logo-ufpa-sf.png";
-import logoComputacao from "../assets/hosted/logo-computacao.png";
+import logoFacomp from "../assets/hosted/logo-facomp.png";
 import logoPPGComp from "../assets/hosted/logo-ppgcomp.png";
 
 // import medalhaDiamante from "../assets/medals/icone_diamante-300x300_1.png";
@@ -36,8 +40,10 @@ const categorias = [
                 nome: "Inteceleri",
                 logo: logoInteceleri,
                 site: null,
-                altura: 130,
+                altura: 210,
             },
+            { nome: "ITProtect", logo: logoItProtect, site: null, altura: 55 },
+
         ],
     },
     {
@@ -46,7 +52,7 @@ const categorias = [
         medalha: medalhaPrata,
         patrocinadores: [
             { nome: "Sucesu", logo: logoSucesu, site: null, altura: 78 },
-            { nome: "ITProtect", logo: logoItProtect, site: null, altura: 50 },
+            { nome: "iSaci", logo: logoiSaci, site: null, altura: 48 },
         ],
     },
     {
@@ -66,19 +72,38 @@ const categorias = [
                 site: null,
                 altura: 44,
             },
+            {
+                nome: "CitiAmazon",
+                logo: logoCitiAmazon,
+                site: null,
+                altura: 48,
+            },
+            {
+                nome: "Fundação Guamá",
+                logo: logoFundacaoGuama,
+                site: null,
+                altura: 140,
+            },
+            {
+                nome: "CEAmazon",
+                logo: logoCeAmazon,
+                site: null,
+                altura: 75,
+            },
         ],
     },
 ];
 
 const realizacao = [
-    { nome: "UFPA", logo: logoUFPA, site: null, altura: 104 },
-    {
-        nome: "Curso de Ciência da Computação",
-        logo: logoComputacao,
-        site: null,
-        altura: 80,
-    },
-    { nome: "PPGCOMP", logo: logoPPGComp, site: null, altura: 90 },
+    { nome: "UFPA", logo: logoUFPA, site: null, altura: 130 },
+    // {
+    //     nome: "Curso de Ciência da Computação",
+    //     logo: logoComputacao,
+    //     site: null,
+    //     altura: 80,
+    // },
+    { nome: "PPGCOMP", logo: logoPPGComp, site: null, altura: 110 },
+    { nome: "FACOMP", logo: logoFacomp, site: null, altura: 110 },
 ];
 
 function LogoSlot({ s, className = "spon" }) {
@@ -173,7 +198,9 @@ export default function Sponsors() {
 
                 <p className="spons-cta reveal" ref={refText}>
                     Quer apoiar o maior encontro de tecnologia do Norte?{" "}
-                    <a href="#">Fale com a organização →</a>
+                    <a href="mailto:secompufpa@gmail.com">
+                        Fale com a organização →
+                    </a>
                 </p>
             </div>
         </section>

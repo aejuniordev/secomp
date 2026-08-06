@@ -28,8 +28,10 @@ export default function Navbar() {
         <a href="#sobre" onClick={closeMenu}>Sobre</a>
         <a href="#trilhas" onClick={closeMenu}>Trilhas</a>
         <a href="#programacao" onClick={closeMenu}>Programação</a>
+        <a href="#palestrantes" onClick={closeMenu}>Palestrantes</a>
+        <a href="#maratona" onClick={closeMenu}>Maratona</a>
         <a href="#local" onClick={closeMenu}>Local</a>
-        <span className="btn btn-disabled">Inscreva-se</span>
+        <a href="#inscricao" className="btn" onClick={closeMenu}>Inscreva-se</a>
       </div>
 
       <button
