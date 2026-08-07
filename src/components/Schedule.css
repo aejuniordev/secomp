@@ -1,8 +1,33 @@
+.days-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.updated-at {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.updated-at span:last-child {
+  color: var(--river-deep);
+  font-weight: 600;
+}
+
 .days {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
 }
 
 .day {
@@ -80,6 +105,17 @@
   margin-top: 2px;
 }
 
+.slot .speaker-line {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.slot .speaker-line strong {
+  color: var(--river-deep);
+  font-weight: 600;
+}
+
 .slot .badge {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.64rem;
@@ -104,6 +140,15 @@
 }
 
 @media (max-width: 560px) {
+  .days-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .updated-at {
+    align-items: flex-end;
+    text-align: right;
+  }
   .days {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

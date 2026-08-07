@@ -1,9 +1,9 @@
 .spons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 3), max-content);
     justify-content: center;
     align-items: center;
+    gap: 12px;
 }
 
 .spon {
@@ -13,6 +13,16 @@
     padding: 10px 12px;
     min-width: 140px;
     min-height: 100px;
+}
+
+@media (max-width: 900px) {
+    .spons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .categoria-bloco {

@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useReveal } from '../hooks/useReveal';
+import { useRelativeTime, formatAbsoluteTime } from '../hooks/useRelativeTime';
 import './Schedule.css';
+
+const SCHEDULE_UPDATED_AT = '2026-08-07T14:22:00-03:00';
 
 const DAYS = [
   { dow: 'Qua', dn: '26' },
@@ -9,14 +12,41 @@ const DAYS = [
   { dow: 'Sáb', dn: '29' },
 ];
 
-const BASE_SLOTS = [
-  { t: '09:00', title: 'Oficina', meta: 'Hall de entrada — UFPA', badge: 'Abertura' },
-  { t: '12:00', title: 'Almoço', meta: 'Palestra magna · a confirmar', badge: 'Palestra' },
-  { t: '14:00', title: 'Credenciamento e Abertura', meta: 'Laboratórios · vagas limitadas', badge: 'Minicurso' },
-  { t: '15:00', title: 'Palestra', meta: 'Auditório principal', badge: 'Painel' },
-  { t: '15:30', title: 'Palestra', meta: 'Auditório principal', badge: 'Painel' },
-  { t: '16:00', title: 'Palestra', meta: 'Auditório principal', badge: 'Painel' },
-  { t: '16:30', title: 'Palestra', meta: 'Auditório principal', badge: 'Painel' },
+const DAY_26_SLOTS = [
+  { t: '10:00', title: 'PLN na prática: dos dados à modelagem', speaker: 'Helder Mateus dos Reis Matos', badge: 'Oficina' },
+  { t: '12:00', title: 'Almoço', meta: '', badge: 'Intervalo' },
+  { t: '14:00', title: 'Abertura', meta: '', badge: 'Geral' },
+  { t: '15:00', title: 'Intenção é tudo que você precisa: nova era da IA, novo código - Mercado Livre', speaker: 'Jherson Haryson Almeida Pereira', badge: 'Palestra' },
+  { t: '16:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '16:30', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '17:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '17:30', title: 'Coffee-break', meta: '', badge: 'Coffee-break' },
+];
+
+const DAY_27_SLOTS = [
+  { t: '10:00', title: 'Desenvolvimento Corporativo em GNU/Linux / Introdução à Depuração do Kernel para Iniciantes', speaker: 'Desnes Augusto Nunes do Rosário', badge: 'Oficina' },
+  { t: '12:00', title: 'Almoço', meta: '', badge: 'Intervalo' },
+  { t: '14:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '14:30', title: 'Engenharia de Software Agêntica: reflexão sobre o impacto e as mudanças na indústria de software - JAMBU Tecnologia', speaker: 'Marcelo Sá', badge: 'Palestra' },
+  { t: '15:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '15:30', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '16:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '16:30', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '17:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '17:30', title: 'Coffee-break', meta: '', badge: 'Coffee-break' },
+];
+
+const DAY_28_SLOTS = [
+  { t: '10:00', title: 'Descomplicando o versionamento de código com o Git/GitHub', speaker: 'Flávio Ramon Almeida de Souza', badge: 'Oficina' },
+  { t: '12:00', title: 'Almoço', meta: '', badge: 'Intervalo' },
+  { t: '14:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '14:30', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '15:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '15:30', title: 'Academia ao Mercado — Transformando Pesquisa em Empresas Tecnológicas', speaker: 'Filipe Saraiva', badge: 'Palestra' },
+  { t: '16:00', title: 'Sistemas inteligentes para supervisão e controle de redes elétricas de energia', speaker: 'Thiago Soares', badge: 'Palestra' },
+  { t: '16:30', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '17:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '17:30', title: 'Coffee-break', meta: '', badge: 'Coffee-break' },
 ];
 
 const MARATHON_SLOTS = [
@@ -29,12 +59,13 @@ const MARATHON_SLOTS = [
   { t: '19:00', title: 'Encerramento', meta: 'Divulgação dos resultados e premiação', badge: 'Encerramento' },
 ];
 
-const SCHEDULES = [BASE_SLOTS, BASE_SLOTS, BASE_SLOTS, MARATHON_SLOTS];
+const SCHEDULES = [DAY_26_SLOTS, DAY_27_SLOTS, DAY_28_SLOTS, MARATHON_SLOTS];
 
 export default function Schedule() {
   const [activeDay, setActiveDay] = useState(0);
   const refHead = useReveal();
   const refDays = useReveal();
+  const updatedLabel = useRelativeTime(SCHEDULE_UPDATED_AT);
 
   return (
     <section className="band" id="programacao">
@@ -53,19 +84,26 @@ export default function Schedule() {
           </p>
         </div>
 
-        <div className="days reveal" role="tablist" aria-label="Dias do evento" ref={refDays}>
-          {DAYS.map((d, i) => (
-            <button
-              key={i}
-              className="day"
-              role="tab"
-              aria-selected={activeDay === i}
-              onClick={() => setActiveDay(i)}
-            >
-              <span className="dow">{d.dow}</span>
-              <span className="dn">{d.dn}</span>
-            </button>
-          ))}
+        <div className="days-row">
+          <div className="days reveal" role="tablist" aria-label="Dias do evento" ref={refDays}>
+            {DAYS.map((d, i) => (
+              <button
+                key={i}
+                className="day"
+                role="tab"
+                aria-selected={activeDay === i}
+                onClick={() => setActiveDay(i)}
+              >
+                <span className="dow">{d.dow}</span>
+                <span className="dn">{d.dn}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="updated-at">
+            <span>Atualizado em {formatAbsoluteTime(SCHEDULE_UPDATED_AT)}</span>
+            <span>Há {updatedLabel.replace(/^há\s*/i, '')}</span>
+          </div>
         </div>
 
         <div className="sched-container">
@@ -74,7 +112,12 @@ export default function Schedule() {
               <div className="t">{slot.t}</div>
               <div>
                 <div className="title">{slot.title}</div>
-                <div className="meta">{slot.meta}</div>
+                {slot.meta && <div className="meta">{slot.meta}</div>}
+                {slot.speaker && (
+                  <div className="speaker-line">
+                    Palestrante: <strong>{slot.speaker}</strong>
+                  </div>
+                )}
               </div>
               <div className="badge">{slot.badge}</div>
             </div>

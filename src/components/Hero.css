@@ -160,3 +160,44 @@
     font-size: 1.15rem;
     display: block;
 }
+
+@media (max-width: 560px) {
+    .hero-inner {
+        padding: 96px 0 56px;
+    }
+
+    .hero-logo {
+        width: clamp(220px, 68vw, 340px);
+    }
+
+    .hero-theme {
+        padding-left: 12px;
+        margin-top: 16px;
+    }
+
+    .hero-theme p {
+        font-size: clamp(1.1rem, 5.5vw, 1.35rem);
+    }
+
+    .hero-tag {
+        margin-top: 22px;
+        font-size: 0.92rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-meta {
+        gap: 16px 28px;
+        margin-top: 32px;
+        padding-top: 20px;
+    }
+}

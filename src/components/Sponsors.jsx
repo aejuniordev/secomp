@@ -12,6 +12,7 @@ import logoCitiAmazon from "../assets/sponsors/logo-cityamazon.png";
 import logoiSaci from "../assets/sponsors/logo-isaci.webp";
 import logoFundacaoGuama from "../assets/sponsors/logo-fundacaoguama.jpeg";
 import logoCeAmazon from "../assets/sponsors/logo-ceamazon-preta.png";
+import logoParatic from "../assets/sponsors/logo-paratic.png";
 
 import logoUFPA from "../assets/hosted/logo-ufpa-sf.png";
 import logoFacomp from "../assets/hosted/logo-facomp.png";
@@ -61,11 +62,16 @@ const categorias = [
         medalha: medalhaBronze,
         patrocinadores: [
             {
-                nome: "Mirtes CTB",
-                logo: logoMirtesCTB,
+                nome: "Fundação Guamá",
+                logo: logoFundacaoGuama,
                 site: null,
-                altura: 100,
-            },
+                altura: 140,
+            }, {
+              nome: "ParaTic",
+              logo: logoParatic,
+              site: null,
+              altura: 100,
+          },
             {
                 nome: "EquilibriumWeb",
                 logo: logoEquilibriumWeb,
@@ -79,10 +85,10 @@ const categorias = [
                 altura: 48,
             },
             {
-                nome: "Fundação Guamá",
-                logo: logoFundacaoGuama,
+                nome: "Mirtes CTB",
+                logo: logoMirtesCTB,
                 site: null,
-                altura: 140,
+                altura: 100,
             },
             {
                 nome: "CEAmazon",
@@ -105,6 +111,13 @@ const realizacao = [
     { nome: "PPGCOMP", logo: logoPPGComp, site: null, altura: 110 },
     { nome: "FACOMP", logo: logoFacomp, site: null, altura: 110 },
 ];
+
+function computeCols(n, maxPerRow = 3) {
+    if (n <= 0) return 1;
+    if (n <= maxPerRow) return n;
+    const rows = Math.ceil(n / maxPerRow);
+    return Math.ceil(n / rows);
+}
 
 function LogoSlot({ s, className = "spon" }) {
     const content = (
@@ -141,7 +154,10 @@ function CategoryBlock({ categoria }) {
                 />
                 <span className="categoria-nome">{categoria.nome}</span>
             </div>
-            <div className="spons">
+            <div
+                className="spons"
+                style={{ "--cols": computeCols(categoria.patrocinadores.length) }}
+            >
                 {categoria.patrocinadores.length > 0 ? (
                     categoria.patrocinadores.map((s) => (
                         <LogoSlot key={s.nome} s={s} />
@@ -190,7 +206,11 @@ export default function Sponsors() {
                     </span>
                 </div>
 
-                <div className="spons reveal" ref={refRealList}>
+                <div
+                    className="spons reveal"
+                    ref={refRealList}
+                    style={{ "--cols": computeCols(realizacao.length) }}
+                >
                     {realizacao.map((s) => (
                         <LogoSlot key={s.nome} s={s} />
                     ))}
