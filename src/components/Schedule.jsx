@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useReveal } from '../hooks/useReveal';
-import { useRelativeTime, formatAbsoluteTime } from '../hooks/useRelativeTime';
+import { useRelativeTime } from '../hooks/useRelativeTime';
 import './Schedule.css';
 
 const SCHEDULE_UPDATED_AT = '2026-08-07T14:22:00-03:00';
@@ -98,11 +98,6 @@ export default function Schedule() {
                 <span className="dn">{d.dn}</span>
               </button>
             ))}
-          </div>
-
-          <div className="updated-at">
-            <span>Atualizado em {formatAbsoluteTime(SCHEDULE_UPDATED_AT)}</span>
-            <span>Há {updatedLabel.replace(/^há\s*/i, '')}</span>
           </div>
         </div>
 

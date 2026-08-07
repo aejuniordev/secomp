@@ -50,7 +50,8 @@
 .hero-inner {
     position: relative;
     z-index: 3;
-    padding: 120px 0 80px;
+    padding-top: 120px;
+    padding-bottom: 80px;
 }
 
 .hero-logo-wrap {
@@ -163,7 +164,8 @@
 
 @media (max-width: 560px) {
     .hero-inner {
-        padding: 96px 0 56px;
+        padding-top: 96px;
+        padding-bottom: 56px;
     }
 
     .hero-logo {
