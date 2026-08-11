@@ -80,9 +80,11 @@ export default function Hero() {
                 <div className="hero-theme">
                     <span className="hero-theme-label">Tema 2026</span>
                     <p>
-                        Tecnologia e sociedade diante das{" "}
-                        <br />
-                        novas fronteiras da inteligência artificial
+                        <span className="hl">
+                            Tecnologia e sociedade diante das{" "}
+                            <br />
+                            novas fronteiras da inteligência artificial
+                        </span>
                     </p>
                 </div>
                 <p className="hero-tag">

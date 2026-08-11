@@ -154,9 +154,20 @@
     font-weight: 700;
     color: var(--river);
     letter-spacing: -0.02em;
-    line-height: 1.18;
+    line-height: 1.42;
     margin: 0;
     text-wrap: balance;
+}
+
+/* Marca-texto que abraça cada linha (box-decoration-break: clone) */
+.hero-theme .hl {
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    background: var(--current);
+    color: var(--ink);
+    padding: 0.08em 0.24em;
+    border-radius: 3px;
 }
 
 .hero-tag {
