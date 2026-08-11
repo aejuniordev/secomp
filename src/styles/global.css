@@ -149,6 +149,11 @@ section {
   box-shadow: 0 10px 26px -8px rgba(14, 124, 128, 0.55);
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--river);
+  outline-offset: 3px;
+}
+
 .btn.ghost {
   background: transparent;
   color: var(--river-deep);
@@ -191,7 +196,7 @@ section {
   stroke-width: 2.2;
   stroke-linecap: round;
   stroke-dasharray: 34 320;
-  filter: drop-shadow(0 0 6px rgba(47, 211, 174, 0.9));
+  filter: drop-shadow(0 0 5px rgba(47, 211, 174, 0.55));
   animation: flow linear infinite;
 }
 
@@ -203,6 +208,7 @@ section {
 
 .node-core {
   fill: var(--current);
+  filter: drop-shadow(0 0 5px rgba(47, 211, 174, 0.35));
   animation: pulse 3.4s ease-in-out infinite;
 }
 
