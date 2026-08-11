@@ -66,6 +66,8 @@ export default function Hero() {
                 ))}
             </svg>
 
+            <div className="hero-grain" aria-hidden="true" />
+
             <div className="wrap hero-inner reveal" ref={ref}>
                 <span className="eyebrow">26–29 AGO 2026 · BELÉM · PARÁ</span>
                 <div className="hero-logo-wrap">
@@ -78,7 +80,7 @@ export default function Hero() {
                 <div className="hero-theme">
                     <span className="hero-theme-label">Tema 2026</span>
                     <p>
-                        Tecnologia e sociedade diante das
+                        Tecnologia e sociedade diante das{" "}
                         <br />
                         novas fronteiras da inteligência artificial
                     </p>
@@ -90,7 +92,7 @@ export default function Hero() {
                 <div className="hero-cta">
                     {/* <a href="#inscricao"></a>*/}
                     <a href="#inscricao" className="btn">
-                      Garantir minha vaga →
+                        Garantir minha vaga <span className="arrow">→</span>
                     </a>
                     <a href="#programacao" className="btn ghost">
                         Ver programação
