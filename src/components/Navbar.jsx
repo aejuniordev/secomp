@@ -31,6 +31,7 @@ export default function Navbar() {
         <a href="#palestrantes" onClick={closeMenu}>Palestrantes</a>
         <a href="#maratona" onClick={closeMenu}>Maratona</a>
         <a href="#local" onClick={closeMenu}>Local</a>
+        <a href="#faq" onClick={closeMenu}>FAQ</a>
         <a href="#inscricao" className="btn" onClick={closeMenu}>Inscreva-se</a>
       </div>
 

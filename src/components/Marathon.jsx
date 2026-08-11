@@ -130,24 +130,7 @@ const UNIVERSITIES = [
         ],
       },
     ],
-  },
-  {
-    nome: 'Faci Wyden',
-    sigla: 'Faci Wyden',
-    tecnicos: [
-      {
-        tecnico: { nome: 'Paulo Melo', genero: 'M' },
-        equipes: [
-          [
-            { nome: 'Alexsandro Carlos de Sousa Silva', genero: 'M' },
-            { nome: 'Kauã Barreto Mourão', genero: 'M' },
-            { nome: 'Filipe Lima Oliveira', genero: 'M' },
-          ],
-        ],
-      },
-    ],
-  },
-  {
+  },{
     nome: 'Unama - Belém',
     sigla: 'Unama - Belém',
     tecnicos: [
@@ -168,6 +151,49 @@ const UNIVERSITIES = [
       },
     ],
   },
+  {
+    nome: 'Faci Wyden',
+    sigla: 'Faci Wyden',
+    tecnicos: [
+      {
+        tecnico: { nome: 'Paulo Melo', genero: 'M' },
+        equipes: [
+          [
+            { nome: 'Alexsandro Carlos de Sousa Silva', genero: 'M' },
+            { nome: 'Kauã Barreto Mourão', genero: 'M' },
+            { nome: 'Filipe Lima Oliveira', genero: 'M' },
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    nome: 'Cesupa',
+    sigla: 'Cesupa',
+    tecnicos: [
+      {
+        tecnico: { nome: 'Daniel Leal Souza', genero: 'M' },
+        equipes: [
+          [
+            { nome: 'Benjamin Yuji Suzuki', genero: 'M' },
+            { nome: 'Rafael Vergolino do Nascimento', genero: 'M' },
+            { nome: 'Nícola Gonçalves', genero: 'M' },
+          ],
+          [
+            { nome: 'João Nascimento', genero: 'M' },
+            { nome: 'Eduardo Cajueiro', genero: 'M' },
+            { nome: 'Julyane Ribeiro', genero: 'F' },
+          ],
+          [
+            { nome: 'José Victor Colino Gonçalves', genero: 'M' },
+            { nome: 'Lucca Nobre', genero: 'M' },
+            { nome: 'José Valdez', genero: 'M' },
+          ],
+        ],
+      },
+    ],
+  },
+
 ];
 
 function PersonIcon({ genero }) {
@@ -240,7 +266,7 @@ function TecnicoGroup({ grupo }) {
   );
 }
 
-function TeamList({ universities }) {
+function TeamList({ universities, children }) {
   const [active, setActive] = useState(0);
   const [locked, setLocked] = useState(false);
   const [enter, setEnter] = useState('side');
@@ -276,6 +302,7 @@ function TeamList({ universities }) {
 
   return (
     <div className="maratona-teams" ref={containerRef}>
+      {children}
       <div className="team-tabs" role="tablist" aria-label="Universidades participantes">
         {universities.map((u, i) => (
           <button
@@ -338,6 +365,17 @@ export default function Marathon() {
                 altamente qualificados, capazes de enfrentar desafios reais
                 de desenvolvimento tecnológico.
               </p>
+              {/* <p className="maratona-edicao-anterior">
+                Confira como foi a{' '}
+                <a
+                  href="https://computacao40anos.ufpa.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  nossa edição anterior
+                </a>
+                .
+              </p>*/}
               <a
                 className="btn"
                 href="https://maratona.sbc.org.br"
@@ -355,7 +393,17 @@ export default function Marathon() {
         </div>
 
         <div className="reveal" ref={refTeams}>
-          <TeamList universities={UNIVERSITIES} />
+          <p className="maratona-encerrado-alert">
+            As inscrições das equipes estão encerradas.
+          </p>
+          <TeamList universities={UNIVERSITIES}>
+            <div className="maratona-teams-info">
+              <div className="maratona-diretor">
+                <span className="maratona-diretor-nome">Josivan dos Reis</span>
+                <span className="maratona-diretor-cargo">Diretor da Sede</span>
+              </div>
+            </div>
+          </TeamList>
         </div>
       </div>
     </section>

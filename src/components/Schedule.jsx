@@ -15,37 +15,38 @@ const DAYS = [
 const DAY_26_SLOTS = [
   { t: '10:00', title: 'PLN na prática: dos dados à modelagem', speaker: 'Helder Mateus dos Reis Matos', badge: 'Oficina' },
   { t: '12:00', title: 'Almoço', meta: '', badge: 'Intervalo' },
-  { t: '14:00', title: 'Abertura', meta: '', badge: 'Geral' },
-  { t: '15:00', title: 'Intenção é tudo que você precisa: nova era da IA, novo código - Mercado Livre', speaker: 'Jherson Haryson Almeida Pereira', badge: 'Palestra' },
-  { t: '16:00', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '16:30', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '14:00', title: 'Credenciamento', meta: '', badge: 'Geral' },
+  { t: '14:30', title: 'Abertura', meta: '', badge: 'Geral' },
+  { t: '15:00', title: 'Intenção é tudo que você precisa: nova era da IA, novo código', speaker: 'Jherson Haryson Almeida Pereira', company: 'Mercado Livre', badge: 'Palestra' },
+  { t: '15:30', title: 'Da Amazônia Brasileira para o mundo: Educação imersiva, inteligência artificial e impacto social', speaker: 'Barbara Chagas', company: "Inteceleri", badge: 'Palestra', destaque: true },
+  { t: '16:00', title: 'Pré-Lançamento de produtos de Tecnologias Educacionais - Transformação da aprendizagem matemática', company: 'Inteceleri', badge: 'Destaque', destaque: true },
+  { t: '16:30', title: 'Redes da Sexta Geração (6G) como Plataforma de Conexão para Inovação Sustentável.', speaker: 'José Jailton Junior', badge: 'Palestra' },
   { t: '17:00', title: 'Em construção', meta: '', badge: 'Em breve' },
   { t: '17:30', title: 'Coffee-break', meta: '', badge: 'Coffee-break' },
 ];
 
 const DAY_27_SLOTS = [
-  { t: '10:00', title: 'Desenvolvimento Corporativo em GNU/Linux / Introdução à Depuração do Kernel para Iniciantes', speaker: 'Desnes Augusto Nunes do Rosário', badge: 'Oficina' },
+  { t: '10:00', title: 'Desenvolvimento corporativo de GNU/Linux / Debugging de Kernel para iniciantes', speaker: 'Desnes Augusto Nunes do Rosário',company:"Red Hat", badge: 'Oficina' },
   { t: '12:00', title: 'Almoço', meta: '', badge: 'Intervalo' },
   { t: '14:00', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '14:30', title: 'Engenharia de Software Agêntica: reflexão sobre o impacto e as mudanças na indústria de software - JAMBU Tecnologia', speaker: 'Marcelo Sá', badge: 'Palestra' },
+  { t: '14:30', title: 'Engenharia de Software Agêntica: reflexão sobre o impacto e as mudanças na indústria de software', speaker: 'Marcelo Sá', company: 'JAMBU Tecnologia', badge: 'Palestra' },
   { t: '15:00', title: 'Em construção', meta: '', badge: 'Em breve' },
   { t: '15:30', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '16:00', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '16:30', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '17:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '16:00', title: 'Cybersegurança na Era da IA', speaker: 'Felipe Vaz', company: "iTProtect", badge: 'Palestra'  },
+  { t: '16:30', title: 'Mostra de Software', company: 'UFPA', meta: '', badge: 'Geral' },
+  { t: '17:00', title: 'Mostra de Software', company: 'UFPA', meta: '', badge: 'Geral' },
   { t: '17:30', title: 'Coffee-break', meta: '', badge: 'Coffee-break' },
 ];
 
 const DAY_28_SLOTS = [
   { t: '10:00', title: 'Descomplicando o versionamento de código com o Git/GitHub', speaker: 'Flávio Ramon Almeida de Souza', badge: 'Oficina' },
   { t: '12:00', title: 'Almoço', meta: '', badge: 'Intervalo' },
-  { t: '14:00', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '14:30', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '15:00', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '15:30', title: 'Academia ao Mercado — Transformando Pesquisa em Empresas Tecnológicas', speaker: 'Filipe Saraiva', badge: 'Palestra' },
-  { t: '16:00', title: 'Sistemas inteligentes para supervisão e controle de redes elétricas de energia', speaker: 'Thiago Soares', badge: 'Palestra' },
-  { t: '16:30', title: 'Em construção', meta: '', badge: 'Em breve' },
-  { t: '17:00', title: 'Em construção', meta: '', badge: 'Em breve' },
+  { t: '14:00', title: 'Vitrine Acadêmica', company: 'PPGCOMP', meta: '', badge: 'Geral' },
+  { t: '14:30', title: 'Vitrine Acadêmica', company: 'PPGCOMP', meta: '', badge: 'Geral' },
+  { t: '15:30', title: 'Academia ao Mercado — Transformando Pesquisa em Empresas Tecnológicas', speaker: 'Filipe Saraiva', company: "SInD", badge: 'Palestra' },
+  { t: '16:00', title: 'Sistemas inteligentes para supervisão e controle de redes elétricas de energia', speaker: 'Thiago Mota Soares', company: "CEAMAZON", badge: 'Palestra' },
+  { t: '16:30', title: 'Engenharia de Software na Era dos Agentes de IA', speaker: 'Thayana Mamoré', badge: 'Palestra' },
+  { t: '17:00', title: 'Encerramento', meta: '', badge: 'Geral' },
   { t: '17:30', title: 'Coffee-break', meta: '', badge: 'Coffee-break' },
 ];
 
@@ -103,14 +104,20 @@ export default function Schedule() {
 
         <div className="sched-container">
           {SCHEDULES[activeDay].map((slot, i) => (
-            <div className="slot" key={i}>
+            <div className={`slot${slot.destaque ? ' slot-destaque' : ''}`} key={i}>
               <div className="t">{slot.t}</div>
               <div>
                 <div className="title">{slot.title}</div>
                 {slot.meta && <div className="meta">{slot.meta}</div>}
-                {slot.speaker && (
+                {(slot.speaker || slot.company) && (
                   <div className="speaker-line">
-                    Palestrante: <strong>{slot.speaker}</strong>
+                    {slot.speaker && (
+                      <>
+                        Palestrante: <strong>{slot.speaker}</strong>
+                      </>
+                    )}
+                    {slot.company &&
+                      (slot.speaker ? ` - ${slot.company}` : slot.company)}
                   </div>
                 )}
               </div>

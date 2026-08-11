@@ -64,12 +64,6 @@ export default function About() {
                                 </strong>{" "}
                                 por meio da tecnologia.
                             </p>
-
-                            {/* A SECOMP reúne quem programa, pesquisa e constrói tecnologia em
-              Belém. São quatro dias de palestras, minicursos, maratona e muita
-              troca — do igarapé à nuvem. Um espaço para conectar a comunidade
-              de computação da Amazônia com o que há de mais novo no mundo da
-              tecnologia.*/}
                         </p>
                     </div>
                     <div className="stats reveal" ref={refStats}>

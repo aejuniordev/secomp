@@ -36,6 +36,7 @@ export default function Footer() {
                         <a href="#palestrantes">Palestrantes</a>
                         <a href="#maratona">Maratona</a>
                         <a href="#local">Local</a>
+                        <a href="#faq">FAQ</a>
                     </div>
                     <div className="foot-col">
                         <h4>Contato</h4>

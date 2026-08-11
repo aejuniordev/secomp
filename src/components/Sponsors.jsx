@@ -16,6 +16,7 @@ import logoParatic from "../assets/sponsors/logo-paratic.png";
 
 import logoUFPA from "../assets/hosted/logo-ufpa-sf.png";
 import logoFacomp from "../assets/hosted/logo-facomp.png";
+import logoComputacao from "../assets/hosted/logo-computacao.png";
 import logoPPGComp from "../assets/hosted/logo-ppgcomp.png";
 
 // import medalhaDiamante from "../assets/medals/icone_diamante-300x300_1.png";
@@ -102,14 +103,14 @@ const categorias = [
 
 const realizacao = [
     { nome: "UFPA", logo: logoUFPA, site: null, altura: 130 },
-    // {
-    //     nome: "Curso de Ciência da Computação",
-    //     logo: logoComputacao,
-    //     site: null,
-    //     altura: 80,
-    // },
-    { nome: "PPGCOMP", logo: logoPPGComp, site: null, altura: 110 },
-    { nome: "FACOMP", logo: logoFacomp, site: null, altura: 110 },
+    {
+        nome: "Curso de Ciência da Computação",
+        logo: logoComputacao,
+        site: null,
+        altura: 100,
+    },
+    // { nome: "PPGCOMP", logo: logoPPGComp, site: null, altura: 110 },
+    // { nome: "FACOMP", logo: logoFacomp, site: null, altura: 110 },
 ];
 
 function computeCols(n, maxPerRow = 3) {

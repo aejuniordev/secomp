@@ -86,6 +86,19 @@
   border-bottom: 1px solid var(--line);
 }
 
+.slot-destaque {
+  background: rgba(224, 146, 43, 0.08);
+  border-radius: 12px;
+  padding: 20px 16px;
+  margin: 16px -16px;
+}
+
+.slot-destaque .badge {
+  background: var(--sun);
+  border-color: var(--sun);
+  color: #fff;
+}
+
 .slot .t {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;

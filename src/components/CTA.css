@@ -104,6 +104,25 @@
   color: var(--river-deep);
 }
 
+.cta-oficinas-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-weight: 700;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--sun) 18%, var(--paper-2));
+  border: 1px solid var(--sun);
+  border-radius: 999px;
+  padding: 8px 18px;
+}
+
+@media (max-width: 640px) {
+  .cta-oficinas-alert {
+    margin-inline: auto;
+  }
+}
+
 .cta-prices {
   display: flex;
   flex-direction: column;

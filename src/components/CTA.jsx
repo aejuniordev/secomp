@@ -62,6 +62,10 @@ export default function CTA() {
                                 Inscrição de 30 de julho a 25 de agosto de
                                 2026, enquanto houver vagas.
                             </p>
+
+                            <p className="cta-oficinas-alert">
+                                As inscrições para as oficinas já estão abertas!
+                            </p>
                         </div>
                     </div>
                 </div>
