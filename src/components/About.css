@@ -29,6 +29,20 @@
   color: var(--ink-soft);
   margin-top: 22px;
   font-size: 1.05rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-body a {
+  color: var(--river);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--river) 50%, transparent);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.about-body a:hover {
+  text-decoration-color: var(--river);
 }
 
 .stats {

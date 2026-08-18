@@ -1,13 +1,30 @@
 import { useReveal } from '../hooks/useReveal';
 import './Speakers.css';
 
-import speakerBira from "../assets/speakers/speaker-ubiratan.png";
+import speakerDesnesRedhat from "../assets/speakers/speaker-desnes-redhat.jpg";
+import speakerFlaviaUfpa from "../assets/speakers/speaker-flavia-ufpa.jpg";
+import speakerFlavioRamon from "../assets/speakers/speaker-flavio-ramon.jpg";
+import speakerHelderMatos from "../assets/speakers/speaker-helder-matos.jpg";
+import speakerJhersonMercadoLivre from "../assets/speakers/speaker-jherson-mercadolivre.jpg";
+import speakerMarceloJambu from "../assets/speakers/speaker-marcelo-jambu.jpg";
+import speakerThiagoCeamazon from "../assets/speakers/speaker-thiago-ceamazon.jpg";
+import speakerBarbaraInteleceri from "../assets/speakers/speaker-barbara-inteceleri.jpg";
+import speakerThayanaAir from "../assets/speakers/speaker-thayana-air.jpg";
+import speakerJoseUfpa from "../assets/speakers/speaker-jose-ufpa.jpg";
 
 const SPEAKERS = [
-    // { nome: 'Ubiratan Holanda Bezerra', instituicao: 'UFPA - Universidade Federal do Oeste do Pará', foto: speakerBira },
-    // { nome: 'Ubiratan Holanda Bezerra', instituicao: 'UFPA - Universidade Federal do Oeste do Pará', foto: speakerBira },
-    // { nome: 'Ubiratan Holanda Bezerra', instituicao: 'UFPA - Universidade Federal do Oeste do Pará', foto: speakerBira },
-    // { nome: 'Ubiratan Holanda Bezerra', instituicao: 'UFPA - Universidade Federal do Oeste do Pará', foto: speakerBira },
+  { nome: 'Thiago Mota Soares', instituicao: 'CEAMAZON - Centro de Excelência em Eficiência Energética da Amazônia', foto: speakerThiagoCeamazon },
+  { nome: 'Jherson Haryson Almeida Pereira', instituicao: 'Mercado Livre', foto: speakerJhersonMercadoLivre },
+  { nome: 'Marcelo Rocha de Sá', instituicao: 'JAMBU Tecnologia', foto: speakerMarceloJambu },
+  { nome: 'Desnes Augusto Nunes do Rosário', instituicao: 'Red Hat', foto: speakerDesnesRedhat },
+    {
+        nome: 'Helder Mateus dos Reis Matos', instituicao: 'PPGCOMP/UFPA', foto: speakerHelderMatos },
+    {
+        nome: 'Bárbara Chagas da Silva', instituicao: 'Inteceleri', foto: speakerBarbaraInteleceri },
+  { nome: 'Flávio Ramon Almeida de Souza', instituicao: 'PPGCOMP/UFPA', foto: speakerFlavioRamon },
+  { nome: 'Flávia Pessoa Monteiro', instituicao: 'UFPA - Universidade Federal do Pará', foto: speakerFlaviaUfpa },
+  { nome: 'Thayana Corrêa Mamoré', instituicao: 'AI/R Company', foto: speakerThayanaAir },
+    { nome: 'José Jailton Junior', instituicao: 'UFPA - Universidade Federal do Pará', foto: speakerJoseUfpa },
 ];
 
 function initials(nome) {
@@ -19,12 +36,19 @@ function initials(nome) {
     .join('');
 }
 
-function SpeakerCard({ nome, instituicao, foto }) {
+function SpeakerCard({ nome, instituicao, foto, fotoPosicao }) {
   const ref = useReveal();
   return (
     <div className="speaker reveal" ref={ref}>
       <div className="speaker-photo">
-        {foto ? <img src={foto} alt={nome} /> : <span>{initials(nome)}</span>}
+        {foto ? (
+          <img
+            src={foto}
+            alt={nome}
+          />
+        ) : (
+          <span>{initials(nome)}</span>
+        )}
       </div>
       <h3>{nome}</h3>
       <p>{instituicao}</p>

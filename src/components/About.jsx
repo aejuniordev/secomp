@@ -19,52 +19,55 @@ export default function About() {
                     <div className="reveal" ref={refText}>
                         <span className="eyebrow">O Evento</span>
                         <p className="about-lead" style={{ marginTop: "18px" }}>
-                            A maior semana de computação do Norte do país. Aqui,
-                            a floresta não é cenário — é{" "}
-                            <em>ponto de partida</em>.
+                            Um dos principais encontros de computação do Norte do país.
                         </p>
-                        <p className="about-body">
+                        <div className="about-body">
                             <p>
-                                Em 2026, realiza-se a primeira edição da{" "}
-                                <strong class="text-white">
+                                Em 2026, a Faculdade de Computação promove a{" "}
+                                <strong className="text-white">
                                     Semana da Computação da UFPA (SECOMP)
                                 </strong>
-                                , organizada por professores e estudantes dos
-                                cursos de graduação em Ciência da Computação,
-                                Sistemas de Informação e Inteligência
-                                Artificial, bem como do Programa de
-                                Pós-Graduação em Computação (PPGCC).
+                                , evento presencial organizado por professores e
+                                estudantes dos cursos de graduação em Ciência da
+                                Computação, Sistemas de Informação e
+                                Inteligência Artificial, além do Programa de
+                                Pós-Graduação em Computação. A realização conta
+                                também com o apoio de profissionais de
+                                tecnologia atuantes no mercado, que participam
+                                como palestrantes e convidados.
                             </p>
                             <br />
                             <p>
-                                A programação contempla palestras, oficinas e a
-                                fase regional da{" "}
-                                <strong class="text-white">
+                                O evento acontecerá entre os dias 26 e 29 de agosto de 2026, no auditório do Espaço Inovação do PCT Guamá. A
+                                programação inclui palestras, oficinas práticas
+                                e a fase regional da{" "}
+                                <strong className="text-white">
                                     Maratona de Programação
-                                </strong>{" "}
-                                promovida pela Sociedade Brasileira de
-                                Computação (SBC).
+                                </strong>
+                                , promovida pela Sociedade Brasileira de
+                                Computação.
                             </p>
                             <br />
                             <p>
-                                A SECOMP representa uma iniciativa estratégica
-                                para o fortalecimento do ecossistema de
-                                Computação na cidade de Belém, gerando impactos
-                                diretos na qualificação e valorização dos
-                                profissionais envolvidos.
+                                Ao reunir estudantes, pesquisadores e
+                                profissionais do setor, a SECOMP fortalece o
+                                ecossistema de tecnologia em Belém e contribui
+                                para a formação e a atualização de quem
+                                participa.
                             </p>
                             <br />
                             <p>
-                                Ao reunir diferentes atores do ecossistema
-                                tecnológico paraense, o evento também estimula o
-                                desenvolvimento de soluções alinhadas às
-                                demandas locais, contribuindo para o{" "}
-                                <strong class="text-white">
-                                    desenvolvimento sustentável da Amazônia
-                                </strong>{" "}
-                                por meio da tecnologia.
+                                Confira como foi a{" "}
+                                <a
+                                    href="https://computacao40anos.ufpa.br/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    edição anterior
+                                </a>
+                                .
                             </p>
-                        </p>
+                        </div>
                     </div>
                     <div className="stats reveal" ref={refStats}>
                         {STATS.map((s, i) => (
