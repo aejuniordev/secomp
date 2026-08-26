@@ -11,20 +11,30 @@ import speakerThiagoCeamazon from "../assets/speakers/speaker-thiago-ceamazon.jp
 import speakerBarbaraInteleceri from "../assets/speakers/speaker-barbara-inteceleri.jpg";
 import speakerThayanaAir from "../assets/speakers/speaker-thayana-air.jpg";
 import speakerJoseUfpa from "../assets/speakers/speaker-jose-ufpa.jpg";
+import speakerClaudioIsaci from "../assets/speakers/speaker-claudio-isaci.jpeg";
+import speakerAllysonTechlead from "../assets/speakers/speaker-allyson-techlead.jpeg";
+import speakerEmanuelVibe from "../assets/speakers/speaker-emanuel-vibe.jpeg";
+import speakerFelipeItProtect from "../assets/speakers/speaker-felipe-itprotect.jpeg";
+import speakerXistoSucesu from "../assets/speakers/speaker-xisto-sucesu.jpg";
 
 const SPEAKERS = [
-  { nome: 'Thiago Mota Soares', instituicao: 'CEAMAZON - Centro de Excelência em Eficiência Energética da Amazônia', foto: speakerThiagoCeamazon },
+    { nome: 'Thayana Corrêa Mamoré', instituicao: 'AI/R Company', foto: speakerThayanaAir },
+    { nome: 'Claudio Alex Jorge da Rocha', instituicao: 'iSACI', foto: speakerClaudioIsaci },
+    { nome: 'Allyson Brito', instituicao: 'Techlead', foto: speakerAllysonTechlead },
+    { nome: 'Emanuel Estumano', instituicao: 'VIBE', foto: speakerEmanuelVibe },
+    { nome: 'Felipe Vaz', instituicao: 'ITProtect', foto: speakerFelipeItProtect },
+    {
+        nome: 'Bárbara Chagas da Silva', instituicao: 'Inteceleri', foto: speakerBarbaraInteleceri },
   { nome: 'Jherson Haryson Almeida Pereira', instituicao: 'Mercado Livre', foto: speakerJhersonMercadoLivre },
   { nome: 'Marcelo Rocha de Sá', instituicao: 'JAMBU Tecnologia', foto: speakerMarceloJambu },
   { nome: 'Desnes Augusto Nunes do Rosário', instituicao: 'Red Hat', foto: speakerDesnesRedhat },
+  { nome: 'Adriana Xisto', instituicao: 'SUCESU', foto: speakerXistoSucesu },
+    { nome: 'Thiago Mota Soares', instituicao: 'CEAMAZON - Centro de Excelência em Eficiência Energética da Amazônia', foto: speakerThiagoCeamazon },
+    { nome: 'Flávia Pessoa Monteiro', instituicao: 'UFPA - Universidade Federal do Pará', foto: speakerFlaviaUfpa },
+    { nome: 'José Jailton Junior', instituicao: 'UFPA - Universidade Federal do Pará', foto: speakerJoseUfpa },
+    { nome: 'Flávio Ramon Almeida de Souza', instituicao: 'PPGCOMP/UFPA', foto: speakerFlavioRamon },
     {
         nome: 'Helder Mateus dos Reis Matos', instituicao: 'PPGCOMP/UFPA', foto: speakerHelderMatos },
-    {
-        nome: 'Bárbara Chagas da Silva', instituicao: 'Inteceleri', foto: speakerBarbaraInteleceri },
-  { nome: 'Flávio Ramon Almeida de Souza', instituicao: 'PPGCOMP/UFPA', foto: speakerFlavioRamon },
-  { nome: 'Flávia Pessoa Monteiro', instituicao: 'UFPA - Universidade Federal do Pará', foto: speakerFlaviaUfpa },
-  { nome: 'Thayana Corrêa Mamoré', instituicao: 'AI/R Company', foto: speakerThayanaAir },
-    { nome: 'José Jailton Junior', instituicao: 'UFPA - Universidade Federal do Pará', foto: speakerJoseUfpa },
 ];
 
 function initials(nome) {

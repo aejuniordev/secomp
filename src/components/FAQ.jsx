@@ -4,6 +4,14 @@ import "./FAQ.css";
 
 const ITEMS = [
     {
+        q: "Qual o valor das oficinas da SECOMP?",
+        a: "Cada oficina custa R$ 10,00 e dará direito a certificado de 2 horas.",
+    },
+    {
+        q: "Estou inscrito nas oficinas, posso assistir às palestras? ",
+        a: "<strong>Não.</strong> Poderão assistir às palestras apenas os participantes que se inscreverem pelo SIG Eventos e enviaram o comprovante de pagamento referente à inscrição com acesso a palestras. Além disso, informamos que todas as vagas para palestras já foram preenchidas, devido à capacidade limitada do local.",
+    },
+    {
         q: "Devo ser aluno da universidade para participar?",
         a: "<strong>Não!</strong> O evento é aberto a toda a comunidade. Qualquer pessoa interessada pode participar, mesmo que não seja aluno da universidade — basta realizar a inscrição e garantir sua vaga.",
     },

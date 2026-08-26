@@ -394,7 +394,7 @@ export default function Marathon() {
 
         <div className="reveal" ref={refTeams}>
           <p className="maratona-encerrado-alert">
-            As inscrições das equipes estão encerradas.
+              As inscrições para palestra estão encerradas. Ainda restam algumas vagas em oficinas.
           </p>
           <TeamList universities={UNIVERSITIES}>
             <div className="maratona-teams-info">

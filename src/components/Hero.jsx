@@ -1,5 +1,5 @@
 import { useReveal } from "../hooks/useReveal";
-import logoSecomp from "../assets/principal/logo-secomp-colorido-sf.png";
+import logoSecomp from "../assets/head/logo-secomp-colorido-sf.png";
 import "./Hero.css";
 
 const NET_PATHS = [

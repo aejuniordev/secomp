@@ -44,6 +44,14 @@ export default function CTA() {
                                     R$ 100,00
                                 </span>
                             </div>
+                            <div className="cta-price-card">
+                                <span className="cta-price-label">
+                                    Oficinas
+                                </span>
+                                <span className="cta-price-value">
+                                    R$ 10,00 <small>/ oficina</small>
+                                </span>
+                            </div>
                         </div>
 
                         <div className="cta-text-col">
@@ -63,9 +71,29 @@ export default function CTA() {
                                 2026, enquanto houver vagas.
                             </p>
 
-                            <p className="cta-oficinas-alert">
-                                As inscrições para as oficinas já estão abertas!
-                            </p>
+                            <div className="cta-oficinas-alert">
+                                <p className="cta-oficinas-title">
+                                    Inscrições encerradas para palestras!
+                                </p>
+                                <p className="cta-oficinas-sub">
+                                    Ainda restam vagas nas seguintes
+                                    oficinas:
+                                </p>
+                                <ul className="cta-oficinas-list">
+                                    <li>
+                                        Descomplicando o versionamento de
+                                        código com o Git/GitHub
+                                    </li>
+                                    <li>
+                                        PLN na prática: dos dados à
+                                        modelagem
+                                    </li>
+                                </ul>
+                                <p className="cta-oficinas-contact">
+                                    Caso queira participar, clique no botão "Quero me inscrever",
+                                    localizado logo abaixo para se inscrever.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,14 +6,20 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "node deploy.js",
+    "publish": "npm run build && npm run deploy"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
+  "overrides": {
+    "minimatch": "^10.0.1"
+  },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.3",
+    "ftp-deploy": "^2.4.3",
     "vite": "^8.1.0"
   }
 }

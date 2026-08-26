@@ -114,8 +114,9 @@
 
 .slot .meta {
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-top: 2px;
+  white-space: pre-line;
 }
 
 .slot .speaker-line {

@@ -105,21 +105,76 @@
 }
 
 .cta-oficinas-alert {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
   width: fit-content;
-  font-weight: 700;
   color: var(--ink);
   background: color-mix(in srgb, var(--sun) 18%, var(--paper-2));
   border: 1px solid var(--sun);
-  border-radius: 999px;
-  padding: 8px 18px;
+  border-radius: 18px;
+  padding: 18px 22px;
+}
+
+.cta-oficinas-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--river-deep);
+}
+
+.cta-oficinas-sub {
+  font-weight: 600;
+}
+
+.cta-oficinas-list {
+  list-style: disc;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.cta-oficinas-list li + li {
+  margin-top: 4px;
+}
+
+.cta-oficinas-contact {
+  font-weight: 500;
+}
+
+.cta-oficinas-contact a {
+  font-weight: 700;
+  color: var(--river-deep);
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {
   .cta-oficinas-alert {
     margin-inline: auto;
+    width: 100%;
+    padding: 16px 18px;
+    gap: 10px;
+  }
+
+  .cta-oficinas-title {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .cta-oficinas-sub {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .cta-oficinas-list {
+    align-self: center;
+    text-align: left;
+    font-size: 0.95rem;
+    padding-left: 18px;
+  }
+
+  .cta-oficinas-contact {
+    font-size: 0.9rem;
+    text-align: center;
   }
 }
 
@@ -153,4 +208,10 @@
   font-size: 1.8rem;
   color: var(--river);
   letter-spacing: -0.02em;
+}
+
+.cta-price-value small {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
 }

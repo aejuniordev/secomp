@@ -55,6 +55,12 @@ const categorias = [
         patrocinadores: [
             { nome: "Sucesu", logo: logoSucesu, site: null, altura: 78 },
             { nome: "iSaci", logo: logoiSaci, site: null, altura: 48 },
+            {
+                nome: "CitiAmazon",
+                logo: logoCitiAmazon,
+                site: null,
+                altura: 65,
+            },
         ],
     },
     {
@@ -78,12 +84,6 @@ const categorias = [
                 logo: logoEquilibriumWeb,
                 site: null,
                 altura: 44,
-            },
-            {
-                nome: "CitiAmazon",
-                logo: logoCitiAmazon,
-                site: null,
-                altura: 48,
             },
             {
                 nome: "Mirtes CTB",
@@ -155,18 +155,38 @@ function CategoryBlock({ categoria }) {
                 />
                 <span className="categoria-nome">{categoria.nome}</span>
             </div>
-            <div
-                className="spons"
-                style={{ "--cols": computeCols(categoria.patrocinadores.length) }}
-            >
-                {categoria.patrocinadores.length > 0 ? (
-                    categoria.patrocinadores.map((s) => (
-                        <LogoSlot key={s.nome} s={s} />
-                    ))
-                ) : (
-                    <div className="spon spon-pending">Aguardando</div>
-                )}
-            </div>
+            {categoria.patrocinadores.length === 5 ? (
+                <>
+                    <div className="spons" style={{ "--cols": 3 }}>
+                        {categoria.patrocinadores.slice(0, 3).map((s) => (
+                            <LogoSlot key={s.nome} s={s} />
+                        ))}
+                    </div>
+                    <div
+                        className="spons"
+                        style={{ "--cols": 2, marginTop: 12 }}
+                    >
+                        {categoria.patrocinadores.slice(3).map((s) => (
+                            <LogoSlot key={s.nome} s={s} />
+                        ))}
+                    </div>
+                </>
+            ) : (
+                <div
+                    className="spons"
+                    style={{
+                        "--cols": computeCols(categoria.patrocinadores.length),
+                    }}
+                >
+                    {categoria.patrocinadores.length > 0 ? (
+                        categoria.patrocinadores.map((s) => (
+                            <LogoSlot key={s.nome} s={s} />
+                        ))
+                    ) : (
+                        <div className="spon spon-pending">Aguardando</div>
+                    )}
+                </div>
+            )}
         </div>
     );
 }
