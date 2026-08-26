@@ -38,3 +38,19 @@ Para empacotar a pasta `dist/` em um arquivo `.zip` para entrega:
 ```bash
 zip -r dist.zip ./dist
 ```
+
+## Publicação
+
+Publica a última versão do site via FTP (build + deploy):
+
+```bash
+npm run publish
+```
+
+Requer um arquivo `.env` na raiz do projeto com as credenciais do FTP:
+
+```
+FTP_USER=usuario
+FTP_PASSWORD=senha
+FTP_HOST=host_do_servidor
+```

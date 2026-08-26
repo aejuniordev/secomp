@@ -1,5 +1,10 @@
-require("dotenv").config();
-const FtpDeploy = require("ftp-deploy");
+import "dotenv/config";
+import FtpDeploy from "ftp-deploy";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const ftpDeploy = new FtpDeploy();
 
 const config = {

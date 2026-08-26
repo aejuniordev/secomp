@@ -28,7 +28,7 @@ const DAY_26_SLOTS = [
 const DAY_27_SLOTS = [
     { t: '09:30', title: 'Desenvolvimento corporativo de GNU/Linux / Debugging de Kernel para iniciantes', speaker: 'Desnes Augusto Nunes do Rosário', meta: 'Local: Laboratório de Computação 02 - FACOMP/ICEN',company:"Red Hat", badge: 'Oficina' },
   { t: '12:00', title: 'Almoço', meta: '', badge: 'Intervalo' },
-  { t: '14:00', title: 'Ações dos CAs: Ciência da Computação, Sistemas de Informação e Inteligência Artificial', speaker: 'Guilherme Pimenta, Sara Matos e Madalena Campos', company: 'UFPA', badge: 'Palestra' },
+  { t: '14:00', title: 'Ações dos CAs: Ciência da Computação, Sistemas de Informação e Inteligência Artificial', speaker: 'Guilherme Sandim, Sara Matos e Madalena Campos', company: 'UFPA', badge: 'Palestra' },
   { t: '14:30', title: 'Engenharia de Software Agêntica: reflexão sobre o impacto e as mudanças na indústria de software', speaker: 'Marcelo Sá', company: 'JAMBU Tecnologia', badge: 'Palestra' },
   { t: '15:00', title: 'Liderando Times de Tecnologia em Tempos de IA — liderança, cultura, produtividade e novas competências', speaker: 'Adriana Xisto', company: 'SUCESU', badge: 'Palestra' },
   { t: '15:30', title: 'Da Pesquisa ao Impacto: Computação, Inovação e Desenvolvimento na Amazônia', speaker: 'Claudio Alex Jorge da Rocha', company: 'iSACI', badge: 'Palestra' },
